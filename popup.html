@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 300px;
+      padding: 16px;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #1d2126;
+      color: white;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    
+    .title {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    
+    .subtitle {
+      font-size: 12px;
+      color: #a6a7aa;
+    }
+    
+    .section {
+      margin-bottom: 16px;
+    }
+    
+    .label {
+      font-size: 12px;
+      color: #a6a7aa;
+      margin-bottom: 4px;
+    }
+    
+    .input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #31353d;
+      border-radius: 4px;
+      background: #262a30;
+      color: white;
+      font-size: 12px;
+      box-sizing: border-box;
+    }
+    
+    .button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 8px;
+    }
+    
+    .button.primary {
+      background: #00c74d;
+      color: white;
+    }
+    
+    .button.secondary {
+      background: #31353d;
+      color: white;
+    }
+    
+    .button:hover {
+      opacity: 0.9;
+    }
+    
+    .button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    
+    .status {
+      font-size: 11px;
+      padding: 4px;
+      border-radius: 3px;
+      text-align: center;
+    }
+    
+    .status.success {
+      background: rgba(0, 199, 77, 0.2);
+      color: #00c74d;
+    }
+    
+    .status.error {
+      background: rgba(255, 85, 72, 0.2);
+      color: #ff5548;
+    }
+    
+    .status.info {
+      background: rgba(255, 224, 99, 0.2);
+      color: #ffe063;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="title">CSGORoll Price Extension</div>
+    <div class="subtitle">Compare prices with PriceEmpire</div>
+  </div>
+  
+  <div class="section">
+    <div class="label">PriceEmpire API Key</div>
+    <input type="password" id="apiKey" class="input" placeholder="Enter your API key">
+  </div>
+  
+  <div class="section">
+    <div class="label">Currency</div>
+    <select id="currency" class="input">
+      <option value="USD">USD ($)</option>
+      <option value="EUR">EUR (€)</option>
+      <option value="NOK">NOK (kr)</option>
+      <option value="SEK">SEK (kr)</option>
+      <option value="GBP">GBP (£)</option>
+      <option value="CAD">CAD ($)</option>
+      <option value="AUD">AUD ($)</option>
+    </select>
+  </div>
+  
+  <button id="saveKey" class="button primary">Save Settings</button>
+  <button id="refreshPrices" class="button secondary">Refresh Prices</button>
+  <button id="clearCache" class="button secondary">Clear Cache</button>
+  
+  <div id="status" class="status" style="display: none;"></div>
+  
+  <div class="section" style="margin-top: 16px;">
+    <div class="label">Instructions:</div>
+    <div style="font-size: 11px; color: #a6a7aa; line-height: 1.4;">
+      1. Get your API key from <a href="https://pricempire.com" target="_blank" style="color: #00c74d;">pricempire.com</a><br>
+      2. Enter it above and click Save<br>
+      3. Visit csgoroll.com to see price comparisons
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "CSGORoll Price Extension",
+  "version": "1.0.0",
+  "description": "Compare BUFF163 item prices on CSGORoll with PriceEmpire market data for better trading decisions",
+  "author": "teig",
+  "homepage_url": "https://github.com/yourusername/csgoroll-price-checker",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "tabs"
+  ],
+  "host_permissions": [
+    "*://csgoroll.com/*",
+    "*://api.pricempire.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://csgoroll.com/*", "*://*.csgoroll.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "CSGORoll Price Extension",
+    "default_icon": {
+      "16": "coin.png",
+      "32": "coin.png",
+      "48": "coin.png",
+      "128": "coin.png"
+    }
+  },
+  "icons": {
+    "16": "coin.png",
+    "32": "coin.png",
+    "48": "coin.png",
+    "128": "coin.png"
+  }
+}
