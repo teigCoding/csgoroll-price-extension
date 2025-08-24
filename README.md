@@ -30,23 +30,31 @@ A Chrome extension that displays PriceEmpire price comparisons on CSGORoll items
 
 The extension automatically detects CS2 items on CSGORoll and displays their current market prices from Buff163 via the PriceEmpire API. Prices are cached for 30 minutes to improve performance and reduce API usage.
 
-![Price Checker Example](example_image.png)
+![Price Checker Example](images/example_image.png)
 *Example of price comparisons displayed on CSGORoll items*
 
 ## Extension Popup
 
-![Extension Popup](popup_example.png)
+![Extension Popup](images/popup_example.png)
 *Extension popup interface for configuration*
 
 ## Files Structure
 
-- `manifest.json` - Extension configuration
-- `background.js` - Service worker for API calls and caching
-- `content.js` - Content script that runs on CSGORoll pages
-- `popup.html` - Extension popup interface
-- `popup.js` - Popup functionality
-- `styles.css` - Styling for price overlays
-- `coin.png` - Extension icon
+```
+├── manifest.json              # Extension configuration
+├── scripts/
+│   ├── background.js          # Service worker for API calls and caching
+│   ├── content.js             # Content script that runs on CSGORoll pages
+│   └── popup.js               # Popup functionality
+├── ui/
+│   ├── popup.html             # Extension popup interface
+│   └── styles.css             # Styling for price overlays
+├── images/
+│   ├── coin.png               # Extension icon
+│   ├── example_image.png      # Example screenshot
+│   └── popup_example.png      # Popup screenshot
+└── README.md                  # Documentation
+```
 
 ## Privacy
 
