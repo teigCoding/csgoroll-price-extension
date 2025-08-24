@@ -65,7 +65,7 @@ This extension only accesses CSGORoll pages and the PriceEmpire API. No personal
 ## Support
 
 If you encounter any issues, please check that:
-1. Your PriceEmpire API key is valid and has sufficient credits
+1. Your PriceEmpire API key is valid
 2. You're on a supported CSGORoll page
 3. The extension has permission to access CSGORoll
 
